@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Unit price savings Calculator</h1>
+  <p>
+    Our unit price calculator is the ultimate shopping calculator. Compare two items and get the best deal! 
+
+    With the unit price calculator, you can compare items with different price per pound, price per ounce, or any other weight or volume unit.
+  </p>
+  <p>
+   Source: https://www.omnicalculator.com/everyday-life/unit-price
+  </p>
+<br />
+<ion-item>
+   <ion-label>Type:</ion-label>
+   <ion-input diplay="ion-navbar" [(ngModel)] ="height"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Option A:</ion-label>
+  <ion-input type="number" [(ngModel)] ="weight"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Option B:</ion-label>
+  <ion-input type="number" [(ngModel)] ="weight"></ion-input>
+<button ion-button color="secondary" (click)="calculateUnitPrice()">CALCULATE</button>
+<ion-item *ngIf="bmi">
+  <h2>Your BMI is: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+  </ion-item>
